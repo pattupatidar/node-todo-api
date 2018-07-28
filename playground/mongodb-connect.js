@@ -19,16 +19,15 @@ MongoClient.connect('mongodb://localhost:27017/TodoApp', (err, client) => {
   //   }
   //   console.log(JSON.stringify(result.ops, undefined, 2));
   // })
-//   db.collection('Users').insertOne({
-//     _id: 123,
-//     Name: 'Pattu Patidar',
-//     Age: 22,
-//     Location: 'Dehradun'
-//   }, (err, results) => {
-//     if(err) {
-//       return console.log('Unable to insert data into users collection');
-//     }
-//     console.log(JSON.stringify(results.ops, undefined, 2));
-//   });
+  db.collection('Users').insertOne({
+    Name: 'Kapil Patidar',
+    Age: 22,
+    Location: 'Dehradun'
+  }, (err, results) => {
+    if(err) {
+      return console.log('Unable to insert data into users collection');
+    }
+    console.log(JSON.stringify(results.ops, undefined, 2));
+  });
 client.close();
  });
